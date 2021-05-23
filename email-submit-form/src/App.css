@@ -1,3 +1,19 @@
+body {
+  font-family:
+    "Hind Siliguri",
+    -apple-system,
+    system-ui,
+    BlinkMacSystemFont,
+    sans-serif;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.container {
+	padding-top: 100px;
+	position: relative;
+}
+
 .navbar a {
   margin-left: 1em;
 	color: #eb7e9a;

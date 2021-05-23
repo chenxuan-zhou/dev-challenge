@@ -7,10 +7,10 @@ const EmailSubmitForm = props => {
   const [email, setEmail] = useState('');
 
   const [error, setError] = useState(false);
-  let err_msg = 'Please enter a valid email address.';
+  const err_msg = 'Please enter a valid email address.';
 
   const [success, setSuccess] = useState(false);
-  let success_msg = 'Thank you for subscribing!';
+  const success_msg = 'Thank you for subscribing!';
 
   const handleInputChange = event => {
     setEmail(event.target.value);
@@ -23,14 +23,19 @@ const EmailSubmitForm = props => {
 
   const saveEmail = () => {
     if (validateEmail(email)) {
-      setError(false);
-      setSuccess(true);
-      EmailService.subscribe({ email: email });
-      console.log(`valid email`);
+      EmailService.subscribe({ email: email })
+        .then(response => {
+          setError(false);
+          setSuccess(true);
+        })
+        .catch(err => {
+          if (err.message === 'Network Error') {
+            props.history.push('/503');
+          }
+        });
     } else {
       setError(true);
       setSuccess(false);
-      console.log(`invalid email: ${email}`);
     }
   }
 

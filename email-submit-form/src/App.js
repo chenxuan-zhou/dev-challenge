@@ -4,6 +4,7 @@ import './App.css';
 
 import EmailSubmitForm from "./components/email-submit-form"
 import EmailList from "./components/email-list"
+import ServiceUnavailable from "./components/service-unavailable"
 
 function App() {
   return (
@@ -23,10 +24,11 @@ function App() {
         </div>
       </nav>
 
-      <div className="container mt-3">
+      <div className="container">
         <Switch>
           <Route exact path="/" component={EmailSubmitForm} />
           <Route exact path="/list" component={EmailList} />
+          <Route exact path="/503" component={ServiceUnavailable} />
         </Switch>
       </div>
 
