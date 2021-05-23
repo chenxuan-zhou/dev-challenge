@@ -1,0 +1,14 @@
+.navbar a {
+  margin-left: 1em;
+	color: #eb7e9a;
+}
+
+.nav-social {
+	position: relative;
+	float: right;
+  margin-right: 1em;
+}
+
+.nav-social a {
+	color: black;
+}

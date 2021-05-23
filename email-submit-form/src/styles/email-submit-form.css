@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Hind+Siliguri');
+
+body {
+  font-family:
+    "Hind Siliguri",
+    -apple-system,
+    system-ui,
+    BlinkMacSystemFont,
+    sans-serif;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.submit-form {
+	padding-top: 100px;
+	position: relative;
+}
+
+.profile img {
+	text-align: center;
+	width: 100%;
+}
+
+.signup-box {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #636363;
+  outline: 0;
+  border-width: 2px;
+  width: 400px;
+  padding-top: 10px;
+  background-color: transparent;
+  border-radius: 30px;
+  border-color: #eb7e9a;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  float: center;
+}
+
+.submit-btn {
+	line-height: 24px !important;
+	outline: 0;
+	width: 100px !important;
+	height: 40px !important;
+	padding: 8px 12px !important;
+	background-color: transparent !important;
+	border-color: transparent !important;
+	text-align: center;
+	letter-spacing: normal !important;
+	display: block;
+	margin: 16px auto 0;
+	float: center;
+}
+
+.err-msg {
+  color: #f7b0c2
+}
