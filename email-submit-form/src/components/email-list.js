@@ -13,7 +13,6 @@ const EmailList = props => {
     EmailService.getAll()
       .then(response => {
         setEmails(response.data.emails);
-        console.log(emails);
       }).catch(e => {
         console.error(e);
       })
@@ -24,7 +23,7 @@ const EmailList = props => {
       <div className="row">
         {emails.map((email) => {
           return (
-            <div className="col-sm-3 pb-4">
+            <div className="col-sm-3 pb-4" key={email}>
               <div className="card">
                 <div className="card-body">
                   <div className="email-link">
