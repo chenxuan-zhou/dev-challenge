@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import EmailService from '../service/email'
 import '../styles/email-list.css'
 

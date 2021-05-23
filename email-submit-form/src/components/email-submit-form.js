@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import EmailService from '../service/email'
 import '../styles/email-submit-form.css'
 import rabbit from '../assets/rabbit.jpg'
@@ -36,7 +36,7 @@ const EmailSubmitForm = props => {
 
   return (
     <div className="submit-form">
-      
+
       <div className="row">
         <div className="col"></div>
         <div className="col">
