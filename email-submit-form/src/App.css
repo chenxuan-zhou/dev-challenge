@@ -1,6 +1,13 @@
 .navbar a {
   margin-left: 1em;
 	color: #eb7e9a;
+	text-decoration: none;
+}
+
+.nav-item a {
+	position: relative;
+	float: left;
+	color: black;
 }
 
 .nav-social {

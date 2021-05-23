@@ -12,7 +12,7 @@ body {
 }
 
 .submit-form {
-	padding-top: 100px;
+	padding-top: 50px;
 	position: relative;
 }
 
@@ -56,4 +56,9 @@ body {
 
 .err-msg {
   color: #f7b0c2
+}
+
+.list-link a {
+  color: orange;
+  text-decoration: none;
 }

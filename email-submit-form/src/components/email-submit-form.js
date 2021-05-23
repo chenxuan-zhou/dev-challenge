@@ -49,8 +49,8 @@ const EmailSubmitForm = props => {
         <div className="col"></div>
       </div>
 
-      <div className="row">
-        <center> A little drop of sunshine! </center>
+      <div className="row list-link">
+        <center> <a href="/list">Check out the list!</a> </center>
       </div>
       <br></br>
 

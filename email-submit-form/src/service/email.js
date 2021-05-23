@@ -10,7 +10,11 @@ const http = axios.create({
 class EmailService {
   subscribe(data) {
     return http.post("/", data)
-  }
+  };
+
+  getAll() {
+    return http.get("/")
+  };
 };
 
 export default new EmailService();

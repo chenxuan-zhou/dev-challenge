@@ -1,0 +1,11 @@
+.email-list {
+	padding-top: 50px;
+	position: relative;
+}
+
+.email-link a {
+  color: #7a7a7a;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
