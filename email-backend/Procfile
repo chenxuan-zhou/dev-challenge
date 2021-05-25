@@ -1,1 +1,1 @@
-cd email-backend && node index.js
+web: node backend/index.js
