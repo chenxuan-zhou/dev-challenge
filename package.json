@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "postinstall": "cd email-submit-form && npm install"
+  }
+}
