@@ -21,7 +21,8 @@ const EmailSubmitForm = props => {
     return re.test(email);
   }
 
-  const saveEmail = () => {
+  const saveEmail = event => {
+    event.preventDefault();
     if (validateEmail(email)) {
       EmailService.subscribe({ email: email })
         .then(response => {
@@ -42,52 +43,56 @@ const EmailSubmitForm = props => {
   return (
     <div className="submit-form">
 
-      <div className="row">
-        <div className="col"></div>
-        <div className="col">
-          <div className="profile">
+      <form onSubmit={saveEmail}>
+
+        <div className="row">
+          <div className="col"></div>
+          <div className="col">
+            <div className="profile">
+              <center>
+                <img src={rabbit} alt="rabbit profile image"></img>
+              </center>
+            </div>
+          </div>
+          <div className="col"></div>
+        </div>
+
+        <div className="row list-link">
+          <center> <a href="/list">Check out the list!</a> </center>
+        </div>
+        <br></br>
+
+        <div className="form-group">
+          <input required
+            type="email"
+            className="form-control signup-box"
+            id="inputEmail"
+            placeholder="Enter email to hear more from me :)"
+            value={email}
+            onChange={handleInputChange}
+          />
+
+          <button className="submit-btn" type="submit">
+            &#128238;
+        </button>
+
+          <div className="err-msg">
             <center>
-              <img src={rabbit} alt="rabbit profile image"></img>
+              {error &&
+                <div>
+                  {err_msg}
+                </div>
+              }
+              {success &&
+                <div>
+                  {success_msg}
+                </div>
+              }
             </center>
           </div>
         </div>
-        <div className="col"></div>
-      </div>
 
-      <div className="row list-link">
-        <center> <a href="/list">Check out the list!</a> </center>
-      </div>
-      <br></br>
-
-      <div className="form-group">
-        <input required
-          type="email"
-          className="form-control signup-box"
-          id="inputEmail"
-          placeholder="Enter email to hear more from me :)"
-          value={email}
-          onChange={handleInputChange}
-        />
-
-        <button onClick={saveEmail} className="submit-btn" type="submit">
-          &#128238;
-        </button>
-
-        <div className="err-msg">
-          <center>
-            {error &&
-              <div>
-                {err_msg}
-              </div>
-            }
-            {success &&
-              <div>
-                {success_msg}
-              </div>
-            }
-          </center>
-        </div>
-      </div>
+      </form>
 
     </div>
   );
