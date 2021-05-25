@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const http = axios.create({
-  baseURL: "http://localhost:5000/api/email",
+  baseURL: "https://email-backend-2021.herokuapp.com/api/email",
   headers: {
     "Content-type": "application/json"
   }
