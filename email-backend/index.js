@@ -5,7 +5,7 @@ import EmailDAO from "./dao/emailDAO.js"
 
 dotenv.config()
 const MongoClient = mongodb.MongoClient
-console.log(process.env)
+
 const port = process.env.PORT || 8000
 
 MongoClient.connect(

@@ -1,5 +1,5 @@
 {
   "scripts": {
-    "postinstall": "cd email-backend && npm install"
+    "heroku-postbuild": "npm install --prefix email-backend && npm install --prefix email-submit-form"
   }
 }
