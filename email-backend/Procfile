@@ -1,1 +1,1 @@
-cd /email-backend/ && npm run start
+cd email-backend && node index.js
