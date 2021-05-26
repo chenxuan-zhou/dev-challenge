@@ -2,7 +2,7 @@
 
 .profile img {
 	text-align: center;
-	width: 100%;
+	width: min(300px,85%);
 }
 
 .signup-box {
@@ -12,7 +12,7 @@
   color: #636363;
   outline: 0;
   border-width: 2px;
-  width: 400px;
+  width: min(400px, 80%);
   padding-top: 10px;
   background-color: transparent;
   border-radius: 30px;
